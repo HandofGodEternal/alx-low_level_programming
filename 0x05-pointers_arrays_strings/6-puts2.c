@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * puts_half - prints second half of a string
+ * puts2 - prints every character of a string
+ * starting with the first character
  * followed by a new line
- * Description: if the number of characters are odd
- * the function will print the last n characters
- * where n=(length_of_the_string - 1) / 2
  * @str: string to be processed
  */
-void puts_half(char *str)
+void puts2(char *str)
 {
-	int i, j;
+	int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		;
-	for (j = (i + 1) / 2; j < i; j++)
-		_putchar(str[j]);
+	{
+		if (i % 2 == 0)
+			_putchar(str[i]);
+	}
 	_putchar('\n');
 }
